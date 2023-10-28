@@ -1,0 +1,214 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@300&family=Lato:wght@300&display=swap');
+/* 
+font-family: 'Cormorant Infant';
+font-family: 'Lato';
+ */
+
+
+/* css variables to reuse colors */
+:root{
+  --color-background--:#f2f2f2;
+  --color-white--:#ffffff;
+  --color-black--:#3b3838;
+  --color-gray--:#afabab;
+  --color-pink1--:#ca0273;
+  --color-pink2--:#e89ab7;
+  --color-pink3--:#ff7f71;
+  --color-puple1--:#8638a8;
+  --color-purple2--:#c382d8;
+  --color-purple3--:#ab8ffd;
+  --color-blue--:#737feb;
+}
+
+/* base style */
+body {
+  font-family: 'Italiana', serif;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-background--);
+
+}
+
+/* requested style */
+.box {
+  width: 1180px;
+  max-width: 95%;
+  margin: 0 auto;
+  padding: 0 0px;
+}
+
+
+
+/* -----------------------------------------------------------*/
+/* header section style */
+.header{
+  width: 100%;
+  padding: 40px 0 ;
+  position: fixed;
+  top: 0; right: 0; left: 0;
+  z-index: 3;
+   
+}
+.header.sticky {
+  padding: 0px;
+  width: 95%;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color:rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.header .box{
+  display:flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+ 
+.header .logo img{
+  padding-top: 7px;
+  width: 80%;
+}
+
+.header .navigation-bar{ 
+  display: flex;
+  gap:50px;
+  justify-content: space-between;
+}
+
+
+.header .navigation-bar a {
+  color: var(--color-pink1--);
+  font-size: 1.2rem;
+  font-family: 'Lato', sans-serif;;
+  text-align: center;
+  position: relative;
+}
+
+.header .navigation-bar a::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--color-pink1--);
+  transition: width 0.3s ease-in-out;
+}
+
+.header .navigation-bar a:hover::after {
+  width: 100%;
+}
+
+.header button {
+  padding: 10px 25px;
+  font-size: 18px;
+  font-family: 'Lato';
+  background-color: var(--color-pink1--);
+  border: 3px solid var(--color-pink1--);
+  border-radius: 100px;
+  border-bottom-right-radius: 0px;
+  cursor: pointer;
+  color: var(--color-white--);
+}
+.header button:hover{
+  background:none;
+  color: var(--color-pink1--);
+
+}
+
+
+/* mobile navigation section style */
+
+/* home section style */
+.home{
+  position: relative;
+  z-index: 2;
+  
+}
+.home .box{
+  padding-top: 6rem; 
+  padding-left: 2rem;
+  padding-right: 2rem;
+  display: flex;
+  flex-direction:row;
+  gap: 70px; 
+  align-items: center; 
+  justify-content: center;
+}
+.home .box .text{
+  width: 50% ;
+}
+.home .box .text h1{
+  font-size: 60px;
+  font-family: 'Cormorant Infant';
+  letter-spacing: 1px;
+  color: var(--color-puple1--);
+  padding-bottom: 12px;
+}
+.home .box .text h4{
+  padding-right: 20px;
+  font-size: 20px;
+  font-family: 'Lato';
+  font-weight: 400;
+  color: var(--color-gray--);
+  padding-bottom: 15px;
+}
+.home .box .text .buttons{
+  display: flex;
+  gap: 10px;
+  
+}
+.home .box .text .buttons a{
+  padding: 10px 25px;
+  font-size: 17px;
+  font-family: 'Lato';
+  border: 3px solid var(--color-pink3--);
+  border-radius: 100px;
+}
+.home .box .text .buttons .btn1 a{
+  border-bottom-right-radius: 0px;
+  background: var(--color-pink3--);
+  color: var(--color-white--);
+}
+.home .box .text .buttons .btn1 a:hover{
+  background:none;
+  color: var(--color-pink3--);
+}
+.home .box .text .buttons .btn2 a{
+  border-top-left-radius: 0px;
+  color: var(--color-pink3--);
+}
+.home .box .text .buttons .btn2 a:hover{
+  background: var(--color-pink3--);
+  color: var(--color-white--);
+}
+
+.home .box .pic img{
+  padding-top: 20px;
+  width: 450px;
+  height: auto;
+}
+
+/* statistics section style */
+
+/* about us section style */
+
+/* course categories section style */
+
+/* teachers section style */
+
+/* students view section style */
+
+/* important events section style */
+
+/* frequently asked Qs section style */
+
+/* contact us section style */
+
+/* footer section style */
+
