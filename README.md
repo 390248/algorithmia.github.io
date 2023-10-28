@@ -1,1 +1,1 @@
-# algoritmia.github.io
+# algorithmia.github.io
