@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/* 
+font-family: 'Cormorant Infant';
+font-family: 'Lato';
+ */
+
+:root {
+    --mainColor: #ca0273;
+    --whiteColor: #ffffff;
+    --titleColor: #555555;
+    --labelColor: #afabab;
+}
+@font-face {
+    font-family: 'Berlin Sans FB';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Berlin Sans FB'), url('BRLNSR.woff') format('woff');
+}
+.popup {
+    position: fixed;
+    z-index: 2;
+    left: 0;top: 0;
+    width: 100%;height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.512);
+    display: none;
+    border: none;
+}
+.wrapper {
+    position: relative;
+    margin: 10% auto; padding: 20px;
+    width: 20%; height: 70%;
+    font-weight: bolder;
+}
+#signupClosePopup, #signinClosePopup{
+    position: absolute;
+    left: 92%;top: 3%;
+    border: none;
+    background-color: white;
+    color: var(--labelColor);
+    font-size: 25px;
+}
+
+.wrapper button {
+    display: block;
+    margin: 0 auto;
+}
+
+.show {
+    display: block;
+}
+
+@media(min-width:540px){
+    .wrapper{
+        width: 35rem;
+    }
+}
+
+.wrapper .form-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%; height: 105%;
+    background-color: var(--whiteColor);
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font-family: "Berlin Sans FB";
+    font-size: 3rem;
+    text-align: center;
+    color: var(--titleColor);
+    font-weight: 500;
+    margin-top: 1rem;
+}
+
+.form-group {
+    position: relative;
+    width: 25rem;
+    margin: 2rem 0;
+}
+
+.form-group i,
+.form-group label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    color: var(--labelColor);
+    padding: 0 .5rem;
+    pointer-events: none;
+    transition: all .4s ease;
+}
+.form-group i{
+    color: #ca0273bc;
+}
+
+.wrapper .form-container form .form-group i {
+    left: .5rem;
+}
+
+.wrapper .form-container form .form-group label {
+    left: 2.5rem;
+    font-family: 'Cormorant Infant';
+    font-weight: 500;
+}
+
+.wrapper .form-container form .form-group input {
+    width: 90%;
+    height: 3rem;
+    padding: 0 1rem;
+    border-radius: .5rem;
+    border: none;
+    outline: none;
+    border: .1rem solid var(--labelColor);
+    font-size: 1.6rem;
+    color: var(--labelColor);
+    background: transparent;
+    font-family: 'Cormorant Infant';
+    font-weight: 500;
+}
+
+.form-group input:focus~label,
+.form-group input:valid~label,
+.form-group input:focus~i,
+.form-group input:valid~i {
+    top: 0 !important;
+    font-size: 1.2rem !important;
+    background-color: var(--whiteColor);}
+
+.forgot-pass {
+    margin: -1.5rem 0 1.5rem;
+}
+
+.forgot-pass a {
+    color: var(--labelColor);
+    text-decoration: none;
+    font-size: 1rem;
+    transform: all .5s ease;
+    font-family: 'Cormorant Infant';
+    font-weight: 500;
+}
+
+.forgot-pass a:hover {
+    color: var(--mainColor);
+}
+
+.wrapper .form-container form .btn {
+    background: linear-gradient(to right, #da4453, var(--mainColor));
+    color: var(--whiteColor);font-weight: 500;
+    width: 40%;height: 3rem; font-size: 1.2rem;
+    outline: none;border: none;border-radius: 1rem;
+    box-shadow: 0 .2rem 1rem rgba(0, 0, 0, 0.4);
+}
+
+.wrapper .form-container form .link {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--labelColor);
+    margin: 1.5rem 0;
+}
+
+.wrapper .form-container form .link a {
+    text-transform: capitalize;
+    color: var(--mainColor);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all .5s ease;
+}
+
+.wrapper .form-container form .link a:hover {
+    color: #da4453;
+}
+
+.wrapper .sign-in {
+    transform: rotate(7deg);
+}
+
+.wrapper.animated-signup .form-container.sign-up {
+    animation: signup-flip 1s ease-in-out forwards;
+}
+
+@keyframes signup-flip {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-50rem) scale(1.1);
+    }
+
+    100% {
+        transform: translateX(0) rotate(7deg) scale(1);
+    }
+}
+
+.wrapper.animated-signup .form-container.sign-in {
+    animation: rotatecard .4s ease-in-out forwards;
+    animation-delay: .3s;
+}
+
+@keyframes rotatecard {
+    0% {
+        transform: rotate(7deg);
+    }
+
+    100% {
+        transform: rotate(0);
+        z-index: 1;
+    }
+}
+
+.wrapper.animated-signin .form-container.sign-in {
+    animation: signin-flip 1s ease-in-out forwards;
+}
+
+@keyframes signin-flip {
+    0% {
+        transform: translateX(0);
+        z-index: 1;
+    }
+
+    50% {
+        transform: translateX(50rem) scale(1.1);
+    }
+
+    100% {
+        transform: translateX(0) rotate(7deg) scale(1);
+    }
+}
+
+.wrapper.animated-signin .form-container.sign-up {
+    transform: rotate(7deg);
+    animation: rotatecard .4s ease-in-out forwards;
+    animation-delay: .3s;
+}
+
+@keyframes rotatecard {
+    0% {
+        transform: rotate(7deg);
+    }
+
+    100% {
+        transform: rotate(0);
+        z-index: 1;
+    }
+}
