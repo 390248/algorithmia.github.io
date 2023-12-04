@@ -1,0 +1,300 @@
+ /* google fonts */
+ @import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@300&family=Lato:wght@300&display=swap');
+ /* 
+ font-family: 'Cormorant Infant';
+ font-family: 'Lato';
+  */
+  @font-face {
+   font-family: 'Berlin Sans FB';
+   font-style: normal;
+   font-weight: normal;
+   src: local('Berlin Sans FB'), url('BRLNSR.woff') format('woff');
+   }
+   
+
+ /* css variables to reuse colors */
+ :root{
+   --color-background--:#f2f2f2;
+   --color-white--:#ffffff;
+   --color-black--:#3b3838;
+   --color-gray--:#afabab;
+   --color-pink1--:#ca0273;
+   --color-pink2--:#e89ab7;
+   --color-pink3--:#ff7f71;
+   --color-puple1--:#8638a8;
+   --color-purple2--:#c382d8;
+   --color-purple3--:#ab8ffd;
+   --color-blue--:#737feb;
+ }
+ 
+ /* base style */
+ body {
+   font-family: 'Italiana', serif;
+   position: relative;
+   overflow: hidden;
+   background-image: url(/img/coursesBackground.png);
+   background-repeat: cover;
+   background-size: cover;
+   background-color: var(--color-background--);
+
+ }
+ .blur-box {
+    position: fixed;
+    top: 0;
+    right: 2.57%;
+    bottom: 0;
+    left: 2.57%;
+    background-color: rgba(255, 255, 255, 0.1); /* Adjust the opacity as needed */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 1;
+  }
+  
+  /* Adjust the z-index of other sections to ensure they are above the blur box */
+  .header, .main, footer{
+    position: relative;
+    z-index: 2;
+  }
+.box {
+    width: 1180px;
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 0 0px;
+  }
+ 
+  /* header section style */
+ .header{
+   width: 100%;
+   padding: 40px 0 ;
+   position: fixed;
+   top: 0; right: 0; left: 0;
+   z-index: 3;
+    
+ }
+ .header.sticky {
+   padding: 0px;
+   width: 95%;
+   top: 5%; 
+   left: 50%;
+   transform: translate(-50%, -50%);
+   background-color:rgba(255, 255, 255, 0.5);
+   backdrop-filter: blur(10px);
+   -webkit-backdrop-filter: blur(20px);
+ }
+ 
+ .header .box{
+   display:flex;
+   gap: 20px;
+   align-items: center;
+   justify-content: space-between;
+ }
+  
+ .header .logo img{
+   padding-top: 7px;
+   width: 80%;
+ }
+ 
+ .header .navigation-bar{ 
+   display: flex;
+   gap:50px;
+   justify-content: space-between;
+ }
+ 
+ 
+ .header .navigation-bar a {
+   color: var(--color-pink1--);
+   font-size: 1.2rem;
+   font-family: 'Lato', sans-serif;;
+   text-align: center;
+   position: relative;
+   text-decoration: none;
+ }
+ 
+ .header .navigation-bar a::after {
+   content: '';
+   display: block;
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 0;
+   height: 1px;
+   background-color: var(--color-pink1--);
+   transition: width 0.3s ease-in-out;
+ }
+ 
+ .header .navigation-bar a:hover::after {
+   width: 100%;
+ }
+ .dropdown-content {
+   display: none;
+   position: absolute;
+   background-color: #f9f9f9;
+   min-width: 160px;
+   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   z-index: 1;
+ }
+ 
+ .dropdown-content a {
+   color: var(--color-pink1--);
+   padding: 12px 16px;
+   text-decoration: none;
+   display: block;
+   font-family: 'Lato';
+ }
+ 
+ .dropdown-content a:hover {
+   background-color: #f1f1f1;
+ }
+ 
+ .dropdown:hover .dropdown-content {
+   display: block;
+ }
+ 
+ 
+ .header button {
+   padding: 10px 25px;
+   font-size: 18px;
+   font-family: 'Lato';
+   background-color: var(--color-pink1--);
+   border: 3px solid var(--color-pink1--);
+   border-radius: 100px;
+   border-bottom-right-radius: 0px;
+   cursor: pointer;
+   color: var(--color-white--);
+ }
+ .header button:hover{
+   background:none;
+   color: var(--color-pink1--);
+ 
+ }
+ .main{
+    margin-top: 8rem;
+    position: relative;
+    z-index: 2;
+    
+    
+  }
+  .main .container{
+    box-sizing: content-box;
+    display: flex;
+    flex-direction:column;
+    gap: 0px; 
+    align-items: center; 
+    justify-content: center;
+    text-align: center;
+    /* background-color: #737feb; */
+  }
+.main .container h2{
+    font-size: 2rem;
+    color: var(--color-pink1--);
+    font-family: 'Berlin Sans FB';
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: .5rem;
+}
+.game{
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+    width: 430px;
+    height: 430px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+}
+.item{
+   position: relative;
+   width: 100px;
+   height: 100px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 3em;
+   background: #fff;
+   transform: rotateY(180deg);
+   transition: 0.25s;
+
+}
+.item.boxOpen{
+    transform: rotateY('0deg');
+}
+.item::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:var(--color-purple3--);
+    transition: 0.25s;
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+}
+.boxOpen:after,
+.boxMatch:after {
+    transform: rotateY(180deg);
+}
+.main .container .info{
+   display: flex;
+   flex-direction: row;
+   gap: 3rem;
+}
+.main .container p{
+    font-size: 20px;
+    color: var(--color-pink1--);
+    font-family: 'Lato';
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.reset{
+    margin-top: .5rem;
+    padding: 10px 25px;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Lato';
+    background-color: var(--color-pink1--);
+    border: 3px solid var(--color-pink1--);
+    border-radius: 100px;
+    border-bottom-right-radius: 0px;
+    cursor: pointer;
+    color: var(--color-white--);
+  }
+  .reset:hover{
+    background:none;
+    color: var(--color-pink1--);
+  
+  }
+
+
+/* footer section style */
+footer{
+    position: relative;
+    z-index: 2;
+  }
+  
+  footer hr{
+    margin-top: 2rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    color: var(--color-black--);
+  }
+  footer .footer-container{
+    display: flex;
+    flex-direction: row;
+    gap: 0rem;
+    justify-content: space-between;
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+  
+  footer .footer-container a img{
+    width: 70%;
+  }
+  
+  footer .footer-container .last p{
+    font-size: 1.1rem;
+    font-family: 'Lato';
+    font-weight: 500;
+    margin-top: 0.7rem;
+  }
+ 

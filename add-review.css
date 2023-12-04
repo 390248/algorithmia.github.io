@@ -1,0 +1,105 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@300&family=Lato:wght@300&display=swap');
+@font-face {
+    font-family: 'Berlin Sans FB';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Berlin Sans FB'), url('BRLNSR.woff') format('woff');
+}
+
+:root {
+    --mainColor: #ca0273;
+    --whiteColor: #ffffff;
+    --titleColor: #ff7f71;
+    --labelColor: #555555;
+}
+.popups {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;top: 0;
+    width: 100%;height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.512);
+    border: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.popups .view-box {
+    position: relative;
+    overflow: hidden;
+    width: 35%; height: 40%;
+    /* center */ top: 50%; left: 50%; transform: translate(-50%, -50%);
+    border-radius: 20px; padding: 10px; flex-direction: column;
+    background-color: var(--whiteColor);
+    z-index: 2; align-items: center; text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.popups .view-box .viewClosePopup{
+    position: absolute;
+    right: 5%;
+    font-size: 30px; color: var(--labelColor);
+}
+.form {
+    background: #555555;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+  }
+.popups .view-box form h2{
+    font-family: 'Berlin Sans FB';
+    font-size: 30px; font-weight: bolder;color: var(--titleColor);
+}
+.popups .view-box form .form-group-name input{
+    width: 400px; height: 30px;
+    margin: 10px 5px 5px 5px; padding: 5px;
+    color: var(--titleColor);
+    outline: none; border-radius: 5px; border-width: 1px;
+}
+.popups .view-box form .form-group-review textarea{
+    width: 400px; height: 120px; resize: none;
+    margin: 10px 5px 5px 5px; padding: 5px;
+    outline: none; border-radius: 5px; border-width: 1px;
+}
+.rate {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    gap: 18%;
+
+  }
+.view-btn{
+    position: relative;
+    left: 40%;
+    background-color: var(--titleColor);
+    border-radius: 20px 20px 0 20px;
+    width: 80px; height: 40px;
+    font-size: 15px; color: #ffffff; font-weight: bold;
+
+}
+.pop{
+    display: block;
+}
+.rate p {
+    position: relative;
+    left: 15%;
+    font-size: 20px;
+    color: #000000;
+    font-weight: lighter;
+    text-align: left;
+}
+.rate .stars {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.stars i {
+    color: #e6e6e6;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+.stars i.selected {
+    color: #ff7f71;
+}
