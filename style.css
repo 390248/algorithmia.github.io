@@ -34,7 +34,7 @@ body {
   position: relative;
   overflow: hidden;
   background-color: var(--color-background--);
-  background-image: URL(/img/indexBackground.png);
+  background-image: URL(indexBackground.png);
   background-repeat: repeat;
   background-size: contain;
   z-index: 0;
