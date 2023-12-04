@@ -32,7 +32,7 @@
    font-family: 'Italiana', serif;
    position: relative;
    overflow: hidden;
-   background-image: url(/img/coursesBackground.png);
+   background-image: url(coursesBackground.png);
    background-repeat: cover;
    background-size: cover;
    background-color: var(--color-background--);
