@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="/css/normalizations.css">
+    <link rel="stylesheet" href="/css/funpage.css">
+</head>
+<body>
+    <div class="blur-box"></div>  
+    <!-- website header section -->
+<section id="header" class="header">
+    <div class="box">
+       <a href="" class="logo"><img src="/img/logo.png" ></a>
+       <nav class="navigation-bar">
+         <a href="/html/index.html#home">Home</a>
+         <a href="/html/index.html#about">About</a>
+         <a href="/html/index.html#courses">Courses</a>
+         <a href="/html/index.html#contact">Contact us</a>
+       </nav>
+       <!-- dropdown menu (needs js to show the menu) -->
+       <div class="dropdown">
+        <div class="arrow"><img src="/img/arrow.png" alt="" width="20px"></div>
+        <div class="dropdown-content">
+          <a href="/html/index.html#statistics">statistics</a>
+          <a href="/html/index.html#teacher">Teachers</a>
+          <a href="/html/index.html#veiws">Reviews</a>
+          <a href="/html/index.html#events">Events</a>
+          <a href="/html/index.html#FAQ">FAQ</a>
+          <a href="funpage.html">Game</a>
+        </div>
+      </div>
+      
+       <button id="myButton" class="sign-in">Sign in</button>
+    </div>
+  </section>
+
+  <!-- memmory game -->
+  <section class="main">
+    <div class="container">
+        <h2>Memory Game</h2>
+        <div class="game"></div>
+        <div class="info">
+            <p id="timer">Timer: <span id="minutes">01</span>:<span id="seconds">00</span></p>
+            <p class="NT">Tries: <span id="tries">0</span></p>
+        </div>
+        <button class="reset" onclick="window.location.reload();">Reset Game</button>
+    </div>
+  </section>
+    
+    <footer>
+        <hr>
+        <div class="footer-container">
+      
+          <a href="">
+            <img src="/img/logo.png" alt="">
+          </a>
+      
+          <div class="last">
+            <p>&copy; Copyright2023-Coded With Passion</p>
+            <i class="bx-chevron-up"></i>
+          </div>
+        </div>
+      </footer>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="/js/funpage.js"></script>
+<script src="/js/script.js"></script>
+</html>

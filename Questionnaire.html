@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registraion Form</title>
+  <!-- <link rel="stylesheet" href="/css/normalizations.css" /> -->
+  <link rel="stylesheet" href="/css/Questionnaire.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="icon" href="/img/icon-logo.png" type ="image/x-icon"> 
+
+</head>
+<body>
+
+  <div class="blur-box"></div> 
+
+  <section id="header" class="header">
+    <div class="box">
+       <a href="" class="logo"><img src="/img/logo.png" ></a>
+       <nav class="navigation-bar">
+         <a href="/html/index.html#home">Home</a>
+         <a href="/html/index.html#about">About</a>
+         <a href="/html/index.html#courses">Courses</a>
+         <a href="/html/index.html#contact">Contact us</a>
+       </nav>
+       <!--dropdown menu (needs js to show the menu)-->
+       <div class="dropdown">
+        <div class="arrow"><img src="/img/arrow.png" alt="" width="20px"></div>
+        <div class="dropdown-content">
+          <a href="/html/index.html#statistics">statistics</a>
+          <a href="/html/index.html#teacher">Teachers</a>
+          <a href="/html/index.html#veiws">Reviews</a>
+          <a href="/html/index.html#events">Events</a>
+          <a href="/html/index.html#FAQ">FAQ</a>
+          <a href="funpage.html">Game</a>
+        </div>
+      </div>
+       <button id="myButton" class="sign-in">Sign in</button>
+    </div>
+  </section>
+
+  <section class="main">
+
+    <div class="box">
+      <div class="progressbar">
+        <div class="progress" id="progress"></div>
+        <div class="progress-step progress-step-active"></div>
+        <div class="progress-step"></div>
+        <div class="progress-step"></div>
+        <div class="progress-step"></div>
+      </div>
+
+      <div class="tittles">
+        <h4 class="step-n">Step 1</h4>
+        <h1 class="step-name">YOUR PROFILE</h1>
+        <h3 class="step-discription">Personalize your hackathon journey.</h3>
+      </div>
+
+      <form action="mailto:algorithmia@gmail.com" name="regForm" class="form">
+        <!-- step1 -->
+        <div class="form-step">
+
+          <div class="inputs">
+
+            <div class="row">
+              <div class="col">
+                <input type="text" name="first name" class="form-control" placeholder="First name" aria-label="First name">
+              </div>
+              <div class="col">
+                <input type="text" name="last name" class="form-control" placeholder="Last name" aria-label="Last name">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <input type="text" name="email" class="form-control" placeholder="Email" aria-label="Email">
+                <div style="color:#ca0273;" id="mailErrorMsg"></div>
+              </div>
+              <div class="col">
+                <input type="text" name="phone Number" class="form-control" placeholder="Phone Number" aria-label="Phone Number">
+                <div style="color:#ca0273;" id="phoneErrorMsg"></div>
+                <div style="color:#ca0273;" id="format"></div>
+              </div>
+            </div>
+            <div class="gender">
+              <label id="label" for="gender" id="gender">Gender: </label>
+              <div class="form-check form-check-inline">
+                <input id="radioC" class="form-check-input" type="radio" name="gender" id="female" value="female">
+                <label id="label" class="form-check-label" for="female">Female</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input id="radioC" class="form-check-input" type="radio" name="gender" id="male" value="male">
+                <label id="label" class="form-check-label" for="male">Male</label>
+              </div>
+              <div style="color:#ca0273;" id="gender"></div>
+            </div>
+            <div class="selectCareer">
+              <select style="gap: 0;" name="Career" class="form-select" aria-label="Default select example">
+                <option value="title" selected>Career:</option>
+                <option value="software_developer">Software Developer</option>
+                <option value="data_analyst">Data Analyst</option>
+                <option value="network_engineer">Network Engineer</option>
+                <option value="cyber_security_analyst">Cyber Security Analyst</option>
+                <option value="UX_UI_designer">UX/UI Designer</option>
+                <option value="cloud_architect">Cloud Architect</option>
+                <option value="database_administrator">Database Administrator</option>
+                <option value="IT_consultant">IT Consultant</option>
+                <option value="system_administrator">System Administrator</option>
+                <option value="AI_Machine_Learning_specialist">AI/Machine Learning Specialist</option>
+              </select>
+              <div style="color:#ca0273;" id="CareerErrorMsg"></div>
+            </div>
+          </div>
+          <div class="buttons">
+            <a href="#" class="btn btn-next width-50 ml-auto next1">Next</a>
+          </div>
+        </div>
+
+        <!-- step2 -->
+        <div class="form-step2">
+
+          <div class="inputs">
+
+            <div class="mb-3">
+              <input type="email" name="team name" class="form-control" id="team-name" placeholder="Team Name">
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <input type="text" name="first participant name" class="form-control" placeholder="First Participant Name" aria-label="First Participant Name">
+              </div>
+              <div class="col">
+                <input type="email" name="first participant email" class="form-control" placeholder="First Participant Email" aria-label="First Participant Email">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <input type="text" name="second participant name" class="form-control" placeholder="Second Participant Name" aria-label="First Participant Name">
+              </div>
+              <div class="col">
+                <input type="email" name="second participant email" class="form-control" placeholder="Second Participant Email" aria-label="Second Participant Email">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <input type="text" name="third participant name" class="form-control" placeholder="Third Participant Name" aria-label="Third Participant Name">
+              </div>
+              <div class="col">
+                <input type="email" name="third participant email" class="form-control" placeholder="Third Participant Email" aria-label="Third Participant Email">
+              </div>
+            </div>
+
+          </div>
+
+          <div class="buttons">
+            <a href="#" class="btn btn-prev prev2">Previous</a>
+            <a href="#" class="btn btn-next width-50 ml-auto next2">Next</a>
+          </div>
+
+        </div>
+
+
+        
+
+        <!-- step3 -->
+        <div class="form-step3" >
+          <div class="inputs">
+
+            <div class="mb-3">
+              <input type="text" name="hackathon-idea-title" class="form-control" id="hackathon-idea" placeholder="Hackathon Idea Title">
+            </div>
+
+            <div class="mb-3">
+              <textarea class="form-control" name="hackathon-idea" id="ideas" placeholder="Type brief introduction to your idea" rows="5"></textarea>
+              <div style="color:#ca0273;" id="ideaErrorMsg"></div>
+            </div>
+
+            <div class="prolang">
+              <label for="programming" name="programmingTitle" id="programming">Preferred programming language for your project: </label>
+              <div class="choices">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" name="programming" id="python" value="python">
+                  <label class="form-check-label" for="python">Python</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" name="programming" id="java" value="java">
+                  <label class="form-check-label" for="java">Java</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" name="programming" id="c++" value="c++">
+                  <label class="form-check-label" for="c++">C++</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox"  name="programming" id="c#" value="c#">
+                  <label class="form-check-label" for="c#">C#</label>
+                </div>
+              </div>
+              <div style="color:#ca0273;" id="programming language"></div>
+            </div>
+          </div>
+            <div class="buttons">
+              <a href="#" class="btn btn-prev prev3">Previous</a>
+              <a href="#" class="btn btn-next width-50 ml-auto next3">Next</a>
+            </div>
+        </div>
+
+        <!-- step4 -->
+        <div class="form-step4">
+            <div class="inputs">
+                <img src="/img/new-product.png" alt="registration is done!">
+                <p>Team registered! Await updates for the <br> upcoming hackathon journey. Happy coding!</p>
+            </div>
+
+          <div class="buttons">
+            <a href="#" class="btn btn-prev prev4">Previous</a>
+            <input type="submit" class="done" style="text-decoration: none;" value="Done" onclick="window.location.reload();">
+          </div>
+        
+      </div>
+      </form>
+
+    </div>
+  </section>
+
+  <footer>
+    <hr>
+    <div class="footer-container">
+  
+      <a href="">
+        <img src="/img/logo.png" alt="">
+      </a>
+  
+      <div class="last">
+        <p>&copy; Copyright2023-Coded With Passion</p>
+        <i class="bx-chevron-up"></i>
+      </div>
+    </div>
+  </footer>
+
+
+
+</body>
+<script src="/js/Questionnaire.js"></script> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</html>
