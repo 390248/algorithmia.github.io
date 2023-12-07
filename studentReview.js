@@ -86,37 +86,37 @@ for (let idx1 = 0; idx1 < stars.length; idx1++) {
         name: "Emily Turner",
         content: "Algorithmia turned my coding hobby into a career, thanks to its top notch instructors and resources.",
         stars: 5,
-        profileImage: `/img/06 pic1.jpg`
+        profileImage: `06 pic1.jpg`
       },
       {
         name: "Sophia Chen",
         content: "The cybersecurity course at Algorithmia made me a pro, securing my dream job in tech.",
         stars: 5,
-        profileImage:`/img/06 pic4.jpg`
+        profileImage:`06 pic4.jpg`
       },
       {
         name: "Isabella Scott",
         content: "Algorithmia data science courses empowered me to harness data's potential and drive real- world insights.",
         stars: 5,
-        profileImage:`/img/06 pic6.jpg`
+        profileImage:`06 pic6.jpg`
       },
       {
         name: "Daniel White",
         content: "I dove into AI with Algorithmia and emerged with expertise, ready to innovate in the field.",
         stars: 5,
-        profileImage:`/img/06 pic3.jpg`
+        profileImage:`06 pic3.jpg`
       },
       {
         name: "Liam Patel",
         content: "From novice to software engineer, Algorithmia fueled my coding journey with hands-on learning and guidance.",
         stars: 5,
-        profileImage:`/img/06 pic2.jpg`
+        profileImage:`06 pic2.jpg`
       },
       {
         name: "Olivia Carter",
         content: "Algorithmia platform is a treasure trove for aspiring developers, offering a clear path to success.",
         stars: 5,
-        profileImage:`/img/06 pic5.jpg`
+        profileImage:`06 pic5.jpg`
       },    
   ]; // Array to store opinions
  
@@ -132,7 +132,7 @@ for (let idx1 = 0; idx1 < stars.length; idx1++) {
       name: userName,
       content: reviewContent,
       stars: starNo,
-      profileImage: `/img/black.jpeg`
+      profileImage: `black.jpeg`
     };
     //push the new object(review) to the opinions
     opinions.push(newOpinion);
