@@ -4,20 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Algorithmia</title>
-  <link rel="icon" href="icon-logo.png" type ="image/x-icon"> 
+  <link rel="icon" href="icon-logo.png" type="image/png">
 
   <!-- css links -->
   <link rel="stylesheet" href="swiper-bundle.min.css">
   <link rel="stylesheet" href="learnMoreButtonStyle.css">
   <link rel="stylesheet" href="normalizations.css">
   <link rel="stylesheet" href="style.css">
+  <!-- <link rel="stylesheet" href="/css/backgroundStyle.css"> -->
   <link rel="stylesheet" href="signUp.css">
   <link rel="stylesheet" href="add-review.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
- 
  
   <!-- mobile navigation -->
   <!-- statistics section -->
@@ -127,7 +127,7 @@
 
   </div>
 </div>
-
+<a href="#home" class="goTop"><img src="goTopArrow.png" alt=""></a>
   <div class="b3">
     <div class="container">
       
@@ -693,13 +693,13 @@
           <h3>Contact Us</h3>
 
           <div class="contact-Box">
-            <form action="mailto:algorithmia@gmail.com" method="post">
+            <form action="contact.php" method="post">
               <div class="inputbox">
-                <input type="text" required="required" placeholder="Enter Your Name">
+                <input type="text" name="contactname" placeholder="Enter Your Name">
               </div>
     
               <div class="inputbox" >
-                <input type="email"  required="required" placeholder="Enter Your Email">
+                <input type="email" name="contactemail"  placeholder="Enter Your Email">
               </div>
     
               <div class="inputbox">
@@ -707,7 +707,7 @@
               </div>
               <div class='buttons'>
                 <input type="submit" placeholder="Submit" >
-              <input type="reset" placeholder="Reset" >
+                <input type="reset" placeholder="Reset" >
               </div>
             </form>
           <div class="info-box">
@@ -849,7 +849,6 @@
           <button type="button" class="view-btn" onclick="addReview()">Add</button>
         </form>
       </div>
-      
   </div>
 
 
